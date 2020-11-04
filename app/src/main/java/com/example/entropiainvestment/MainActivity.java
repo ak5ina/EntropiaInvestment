@@ -4,6 +4,7 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.AlertDialog;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -32,7 +33,7 @@ import java.util.ArrayList;
 public class MainActivity extends AppCompatActivity {
 
     private EditText textviewEmail, textviewPassword;
-    private Button btn_login, btn_forgotpw, btn_MyOrders, btn_MyIntrest;
+    private Button btn_login, btn_createAccount, btn_MyOrders, btn_MyIntrest;
     private FirebaseAuth mAuth;
     private TextView overViewUserMail, overViewUserBank;
     private ListView listView;
@@ -57,7 +58,7 @@ public class MainActivity extends AppCompatActivity {
         textviewEmail = findViewById(R.id.login_email);
         textviewPassword = findViewById(R.id.login_password);
         btn_login = findViewById(R.id.login_btn_login);
-        btn_forgotpw = findViewById(R.id.login_btn_forgotpw);
+        btn_createAccount = findViewById(R.id.login_btn_createaccount);
 
         //Making btn functions:
         btn_login.setOnClickListener(new View.OnClickListener() {
@@ -68,6 +69,14 @@ public class MainActivity extends AppCompatActivity {
                 } else {
                     Toast.makeText(getApplicationContext(), "Please enter both email and password", Toast.LENGTH_LONG).show();
                 }
+            }
+        });
+
+        btn_createAccount.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, CreateAccount.class);
+                startActivity(intent);
             }
         });
 
@@ -131,15 +140,15 @@ public class MainActivity extends AppCompatActivity {
         updateStockList();
     }
 
-    @Override
-    public void onStart() {
-        super.onStart();
-        // Check if user is signed in (non-null) and update UI accordingly.
-        FirebaseUser currentUser = mAuth.getCurrentUser();
-        if (currentUser != null) {
-            GetDateToUser(currentUser);
-        }
-    }
+//    @Override
+//    public void onStart() {
+//        super.onStart();
+//        // Check if user is signed in (non-null) and update UI accordingly.
+//        FirebaseUser currentUser = mAuth.getCurrentUser();
+//        if (currentUser != null) {
+//            GetDateToUser(currentUser);
+//        }
+//    }
 
     private void updateStockList(){
         //update

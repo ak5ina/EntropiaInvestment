@@ -14,21 +14,21 @@
         android:orientation="vertical"
         android:layout_gravity="center"
         android:gravity="center">
-    <TextView
-        android:id="@+id/textview_login_header_text"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Login"
-        android:textSize="35dp"
-        android:fontFamily="sans-serif-black"
-        android:layout_gravity="center"
+        <TextView
+            android:id="@+id/textview_login_header_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Create Account"
+            android:textSize="35dp"
+            android:fontFamily="sans-serif-black"
+            android:layout_gravity="center"
 
-        android:textColor="@color/blueStart"
-        />
+            android:textColor="@color/blueStart"
+            />
 
 
         <EditText
-            android:id="@+id/login_email"
+            android:id="@+id/register_email"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
@@ -43,7 +43,7 @@
 
 
         <EditText
-            android:id="@+id/login_password"
+            android:id="@+id/register_password"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
@@ -65,10 +65,10 @@
             android:gravity="center">
 
             <Button
-                android:id="@+id/login_btn_createaccount"
+                android:id="@+id/createacc_btn_back"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Create account"
+                android:text="Back"
                 android:background="@drawable/btn_background"
                 android:padding="5dp"
 
@@ -77,10 +77,10 @@
 
             <Button
                 android:layout_marginLeft="20dp"
-                android:id="@+id/login_btn_login"
+                android:id="@+id/createacc_btn_create"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Login"
+                android:text="Create account"
                 android:background="@drawable/btn_background"
 
 
