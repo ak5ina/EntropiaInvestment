@@ -4,6 +4,7 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.AlertDialog;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -97,16 +98,21 @@ public class MainActivity extends AppCompatActivity {
 
     private void GetDateToUser(FirebaseUser user){
         //Changing UI to the logged in UI.
-        setContentView(R.layout.activity_over_view);
-        firebaseUser = user;
 
-        //init main screen
-        overViewUserMail = findViewById(R.id.textview_profile_name);
-        overViewUserBank = findViewById(R.id.textview_bucksamount);
-        listView = findViewById(R.id.listview);
-        stocklist = new StockList();
+        if (mAuth.getUid().contains("Pwoy6RVFm2NhXcTHGLuYSe9QFL33")){
+            AdminLogin();
+        } else {
 
-        overViewUserMail.setText("Getting data");
+            setContentView(R.layout.activity_over_view);
+            firebaseUser = user;
+
+            //init main screen
+            overViewUserMail = findViewById(R.id.textview_profile_name);
+            overViewUserBank = findViewById(R.id.textview_bucksamount);
+            listView = findViewById(R.id.listview);
+            stocklist = new StockList();
+
+            overViewUserMail.setText("Getting data");
 
 //        //Write a message to the database
 //        FirebaseDatabase database = FirebaseDatabase.getInstance();
@@ -119,7 +125,7 @@ public class MainActivity extends AppCompatActivity {
 //
 //        myRef.child(user.getUid()).setValue(user2);
 
-        //stock
+            //stock
 //        System.out.println("TEst");
 //        StockList lollist = new StockList();
 //        lollist.getListOfStocks().add(new Stock(7.5,"Ancient Greece", getResources().getString(R.string.stock1_ag_info)));
@@ -128,7 +134,8 @@ public class MainActivity extends AppCompatActivity {
 //        lollist.getListOfStocks().add(new Stock(91,"Arkadia Underground", getResources().getString(R.string.stock4_au_info)));
 //        myRef.setValue(lollist);
 
-        updateStockList();
+            updateStockList();
+        }
     }
 
     @Override
@@ -223,11 +230,9 @@ public class MainActivity extends AppCompatActivity {
 
 
                 }
-                if (mAuth.getUid().contains("Pwoy6RVFm2NhXcTHGLuYSe9QFL33")){
-                    AdminLogin();
-                } else {
+
                     UpdateUI();
-                }
+
 
             }
 
@@ -240,7 +245,21 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void AdminLogin() {
-        setContentView(R.layout.activity_over_view);
+        setContentView(R.layout.activity_admin);
+
+        Button btn_add_user = findViewById(R.id.btn_add_new_profile);
+        Button btn_add_intrest = findViewById(R.id.btn_add_intrest);
+        Button btn_con_order = findViewById(R.id.btn_confirm_orders);
+
+        btn_add_user.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, Admin_Add_Intrest.class);
+                startActivity(intent);
+            }
+        });
+
+
 
 
     }

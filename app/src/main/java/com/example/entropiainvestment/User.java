@@ -9,6 +9,7 @@ public class User {
     private Portfolio portfolio;
     private ArrayList<IntrestPayout> intrestPayouts;
     private ArrayList<Order> myOrders;
+    private String authUID;
 
     public User(String userEmail, double bank){
         this.userEmail = userEmail;
@@ -18,6 +19,15 @@ public class User {
         myOrders = new ArrayList<>();
     }
 
+    public User(String userEmail, double bank, String authUID){
+        this.userEmail = userEmail;
+        this.bank = bank;
+        intrestPayouts = new ArrayList<>();
+        portfolio = new Portfolio();
+        myOrders = new ArrayList<>();
+        this.authUID = authUID;
+    }
+
     public User(){
         this.userEmail = "Unknown";
         this.bank = 0;
@@ -25,6 +35,8 @@ public class User {
         portfolio = new Portfolio();
         myOrders = new ArrayList<>();
     }
+
+
 
     public String getUserEmail() {
         return userEmail;
@@ -65,5 +77,13 @@ public class User {
 
     public void setMyOrders(ArrayList<Order> myOrders) {
         this.myOrders = myOrders;
+    }
+
+    public String getAuthUID() {
+        return authUID;
+    }
+
+    public void setAuthUID(String authUID) {
+        this.authUID = authUID;
     }
 }
