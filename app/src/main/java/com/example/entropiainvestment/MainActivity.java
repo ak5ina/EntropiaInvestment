@@ -117,38 +117,19 @@ public class MainActivity extends AppCompatActivity {
 
         overViewUserMail.setText("Getting data");
 
-//        //Write a message to the database
-//        FirebaseDatabase database = FirebaseDatabase.getInstance();
-//        //Getting user
-//        DatabaseReference myRef = database.getReference("stocks");
-//
-//        User user2 = new User(user.getEmail(),0);
-//        Portfolio portfolio = new Portfolio(0,0,1,0);
-//        user2.setPortfolio(portfolio);
-//
-//        myRef.child(user.getUid()).setValue(user2);
-
-        //stock
-//        System.out.println("TEst");
-//        StockList lollist = new StockList();
-//        lollist.getListOfStocks().add(new Stock(7.5,"Ancient Greece", getResources().getString(R.string.stock1_ag_info)));
-//        lollist.getListOfStocks().add(new Stock(19.3,"Crystal Palace", getResources().getString(R.string.stock2_cp_info)));
-//        lollist.getListOfStocks().add(new Stock(60.5,"Arkadia Moon", getResources().getString(R.string.stock3_am_info)));
-//        lollist.getListOfStocks().add(new Stock(91,"Arkadia Underground", getResources().getString(R.string.stock4_au_info)));
-//        myRef.setValue(lollist);
 
         updateStockList();
     }
 
-//    @Override
-//    public void onStart() {
-//        super.onStart();
-//        // Check if user is signed in (non-null) and update UI accordingly.
-//        FirebaseUser currentUser = mAuth.getCurrentUser();
-//        if (currentUser != null) {
-//            GetDateToUser(currentUser);
-//        }
-//    }
+    @Override
+    public void onStart() {
+        super.onStart();
+        // Check if user is signed in (non-null) and update UI accordingly.
+        FirebaseUser currentUser = mAuth.getCurrentUser();
+        if (currentUser != null) {
+            GetDateToUser(currentUser);
+        }
+    }
 
     private void updateStockList(){
         //update
