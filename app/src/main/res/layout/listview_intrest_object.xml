@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:minWidth="300dp"
+    android:minHeight="230dp"
+    android:layout_marginTop="10dp"
+    android:gravity="center"
+    android:clickable="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@drawable/stock_background"
+        android:layout_margin="5dp"
+        android:padding="5dp"
+        android:clickable="true">
+
+        <TextView
+            android:id="@+id/my_intrest_name_of_activity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Intrest "
+            android:textSize="20dp"
+            android:fontFamily="sans-serif-black"
+            android:layout_gravity="center"
+            />
+
+        <TextView
+            android:id="@+id/my_intrest_name_of_stock"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="10dp"
+            android:text="Stock: 1/100 Ancient Greece"
+            android:textSize="18dp"
+            android:fontFamily="sans-serif-black"
+            />
+
+
+        <TextView
+            android:id="@+id/my_intrest_amount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Amount: "
+            android:textSize="16dp"
+            android:fontFamily="sans-serif-black"
+            android:layout_marginLeft="10dp"
+
+            />
+
+        <TextView
+            android:id="@+id/my_intrest_info"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Price: | Total Price:"
+            android:textSize="16dp"
+            android:fontFamily="sans-serif-black"
+            android:layout_marginLeft="10dp"
+
+            />
+
+
+    </LinearLayout>
+
+</androidx.appcompat.widget.LinearLayoutCompat>

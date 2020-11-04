@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "428567555312",
+    "firebase_url": "https://entropiainvestment-56d9d.firebaseio.com",
+    "project_id": "entropiainvestment-56d9d",
+    "storage_bucket": "entropiainvestment-56d9d.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:428567555312:android:509aa662c9dcf42e9be635",
+        "android_client_info": {
+          "package_name": "com.example.entropiainvestment"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "428567555312-f2h54h0a0ca6aegitlberhbtecv6rvcj.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.entropiainvestment",
+            "certificate_hash": "dda0448da5c3490107ec3f35871593550e89eba0"
+          }
+        },
+        {
+          "client_id": "428567555312-10uuconpspsh8lu767jjc9udrg0k6pov.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAimcFzlJ2RCUlf86s7OSQXpw3DKAUimno"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "428567555312-10uuconpspsh8lu767jjc9udrg0k6pov.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

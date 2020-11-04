@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">EntropiaInvestment</string>
+
+    <string name="stock1_ag">Ancient Greece</string>
+    <string name="stock2_cp">Crystal Palace</string>
+    <string name="stock3_am">Arkadia Moon</string>
+    <string name="stock4_au">Arkadia Underground</string>
+
+    <string name="stock1_ag_info">Ancient Greece payout every sunday at 01:00 Paris time. Has a cheap price but also the worst returns.</string>
+    <string name="stock2_cp_info">Crystal Palace payout every sunday at 01:00 Paris time. This is at the moment the one we recommend you to buy.</string>
+    <string name="stock3_am_info">Arkadia Moon payout every day at 01:00. This stock is atm kinda over priced.</string>
+    <string name="stock4_au_info">Arkadia Underground every day at 01:00. Most expensive stock we have, but payout good.</string>
+</resources>

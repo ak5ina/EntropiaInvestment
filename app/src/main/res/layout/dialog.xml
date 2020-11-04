@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:minWidth="300dp"
+    android:minHeight="230dp"
+    android:background="@drawable/stock_background"
+    android:gravity="center"
+    android:clickable="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_margin="5dp"
+        android:clickable="true">
+
+        <TextView
+            android:id="@+id/order_buyorsell"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Order: "
+            android:textSize="20dp"
+            android:fontFamily="sans-serif-black"
+            android:layout_gravity="center"
+            />
+
+        <TextView
+            android:id="@+id/order_stockname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="10dp"
+            android:text="Stock: 1/100 Ancient Greece"
+            android:textSize="18dp"
+            android:fontFamily="sans-serif-black"
+            />
+
+        <TextView
+            android:id="@+id/order_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Price: "
+            android:textSize="16dp"
+            android:fontFamily="sans-serif-black"
+            android:layout_marginLeft="10dp"
+
+            />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Amount: "
+            android:textSize="16dp"
+            android:fontFamily="sans-serif-black"
+            android:layout_marginLeft="10dp"
+
+            />
+
+        <EditText
+            android:id="@+id/order_amounttobuyorsell"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="0"
+            android:textSize="16dp"
+            android:inputType="number"
+            android:fontFamily="sans-serif-black"
+            android:layout_marginLeft="10dp"
+
+            />
+
+    </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="25dp"
+            android:gravity="center">
+
+            <Button
+                android:id="@+id/order_cancel"
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Cancel"
+
+                />
+
+            <Button
+                android:id="@+id/order_proceed"
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Buy"
+
+                />
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+</androidx.appcompat.widget.LinearLayoutCompat>
