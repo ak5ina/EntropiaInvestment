@@ -37,6 +37,13 @@ public class CreateAccount extends AppCompatActivity {
         Button btn_create = findViewById(R.id.createacc_btn_create);
         Button btn_back = findViewById(R.id.createacc_btn_back);
 
+        btn_back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        });
+
         btn_create.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
