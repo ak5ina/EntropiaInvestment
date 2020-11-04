@@ -53,6 +53,18 @@
             android:layout_marginLeft="10dp"
             />
 
+        <EditText
+            android:id="@+id/text_add_intrest_date"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Intrest date"
+            android:textSize="16dp"
+            android:gravity="center"
+            android:inputType="text"
+            android:fontFamily="sans-serif-black"
+            android:layout_marginLeft="10dp"
+            />
+
         <Button
             android:id="@+id/btn_confirm_new_intrest"
             android:layout_width="match_parent"

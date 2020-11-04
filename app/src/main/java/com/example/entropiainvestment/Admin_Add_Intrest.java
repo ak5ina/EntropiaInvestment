@@ -18,6 +18,7 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 public class Admin_Add_Intrest extends AppCompatActivity {
@@ -25,12 +26,12 @@ public class Admin_Add_Intrest extends AppCompatActivity {
     Spinner stockSpinner;
     ArrayList<Stock> listOfStock;
     ArrayList<User> userList;
-    ArrayList<IntrestPayout> intrestList;
     FirebaseDatabase database;
     DatabaseReference myRef;
     int intNumberForStockToLookAt;
+    IntrestPayout currentPayout;
 
-    EditText etAmountA100Share;
+    EditText etAmountA100Share, etDate, etInfo;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,6 +39,9 @@ public class Admin_Add_Intrest extends AppCompatActivity {
         setContentView(R.layout.activity_admin__add__intrest);
 
         etAmountA100Share = findViewById(R.id.text_add_intrest_amount);
+        etDate = findViewById(R.id.text_add_intrest_date);
+        etInfo = findViewById(R.id.text_add_intrest_info);
+
         database = FirebaseDatabase.getInstance();
         //Getting user
         myRef = database.getReference("users");
@@ -115,7 +119,6 @@ public class Admin_Add_Intrest extends AppCompatActivity {
     }
 
     private void TEST() {
-        intrestList = new ArrayList<>();
 
         EditText etAmountA100Share = findViewById(R.id.text_add_intrest_amount);
         Double amountA100Share = Double.valueOf(etAmountA100Share.getText().toString());
@@ -131,9 +134,18 @@ public class Admin_Add_Intrest extends AppCompatActivity {
         for (User userToLookAt : userList){
 //
 //            IntrestPayout payout = new IntrestPayout((amountAShare*userToLookAt.getIntrestPayouts().get()))
-            System.out.println(intNumberForStockToLookAt);
+            if (userToLookAt.getPortfolio().getStockYouOwn().get(intNumberForStockToLookAt) > 0){
+                double payout = (amountAShare*userToLookAt.getPortfolio().getStockYouOwn().get(intNumberForStockToLookAt));
 
-            System.out.println("TESTER" + userToLookAt.getAuthUID());
+                currentPayout = new IntrestPayout(payout,
+                        etDate.getText().toString(), etInfo.getText().toString(), "Intrest");
+
+                double newbank = userToLookAt.getBank() + payout;
+                System.out.println("NEW BANK: " + newbank  +" | " + "");
+                myRef.child(userToLookAt.getAuthUID()).child("bank").setValue(newbank);
+                myRef.child(userToLookAt.getAuthUID()).child("intrestpayouts").push().setValue(currentPayout);
+            }
+
 
         }
 
