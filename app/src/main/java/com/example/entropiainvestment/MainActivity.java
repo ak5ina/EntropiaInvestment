@@ -4,6 +4,7 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.AlertDialog;
+import android.app.Dialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -32,8 +33,8 @@ import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
 
-    private EditText textviewEmail, textviewPassword;
-    private Button btn_login, btn_createAccount, btn_MyOrders, btn_MyIntrest;
+    private EditText textviewEmail, textviewPassword, btcinputadress;
+    private Button btn_login, btn_createAccount, btn_MyOrders, btn_MyIntrest, btn_btcadress;
     private FirebaseAuth mAuth;
     private TextView overViewUserMail, overViewUserBank;
     private ListView listView;
@@ -168,7 +169,7 @@ public class MainActivity extends AppCompatActivity {
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                 for (DataSnapshot childDataSnapshot : dataSnapshot.getChildren()) {
                     logedInUser.setUserEmail(dataSnapshot.child("userEmail").getValue().toString());
-                    logedInUser.setBank(Integer.valueOf(dataSnapshot.child("bank").getValue().toString()));
+                    logedInUser.setBank(Double.valueOf(dataSnapshot.child("bank").getValue().toString()));
                     //ADDING STOCKS TO PORTFOLIO
                     int i = 0;
                     //PUTTIN IN THE PORTFOLIO
@@ -294,6 +295,52 @@ public class MainActivity extends AppCompatActivity {
 
                 builder.setView(view);
                 builder.create().show();
+
+
+
+            }
+        });
+
+
+
+        btn_btcadress = findViewById(R.id.btn_bitcoin);
+        btn_btcadress.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                final AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
+
+                LayoutInflater inflater = MainActivity.this.getLayoutInflater();
+                final View view = inflater.inflate(R.layout.dialog_bitcoin, null);
+
+                builder.setView(view);
+                final Dialog dialog = builder.create();
+                dialog.show();
+
+                Button btn_confirm_btc_adress = view.findViewById(R.id.btn_btc_confirm);
+                Button btn_cancel_btc_adress = view.findViewById(R.id.btn_btc_cancel);
+
+                btcinputadress = view.findViewById(R.id.et_btc_adress);
+
+                btn_confirm_btc_adress.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+
+                        //        //Write a message to the database
+                        FirebaseDatabase database2 = FirebaseDatabase.getInstance();
+                        DatabaseReference myRef2 = database2.getReference("users").child(mAuth.getUid()).child("btcadr");
+                        myRef2.setValue(btcinputadress.getText().toString());
+                        dialog.hide();
+                    }
+                });
+
+
+                btn_cancel_btc_adress.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        dialog.hide();
+                    }
+                });
 
 
 

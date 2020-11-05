@@ -3,7 +3,7 @@ package com.example.entropiainvestment;
 public class IntrestPayout {
 
     private double buckspayout;
-    private String date, info, payoutID, type;
+    private String date, info, payoutID, type, bitcoinAdress;
 
     public IntrestPayout(double buckspayout, String date, String info, String type){
         this.buckspayout = buckspayout;
@@ -59,5 +59,13 @@ public class IntrestPayout {
 
     public void setType(String type) {
         this.type = type;
+    }
+
+    public String getBitcoinAdress() {
+        return bitcoinAdress;
+    }
+
+    public void setBitcoinAdress(String bitcoinAdress) {
+        this.bitcoinAdress = bitcoinAdress;
     }
 }

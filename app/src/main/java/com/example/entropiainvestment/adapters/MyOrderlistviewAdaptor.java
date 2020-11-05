@@ -65,11 +65,6 @@ public class MyOrderlistviewAdaptor extends ArrayAdapter<Order> {
                         DatabaseReference myRef = database.getReference("users").child(athenticationString).child("myorders").child(orderList.get(position).getOrderID());
                             myRef.child("canceled").setValue(true);
 
-//
-//                FirebaseDatabase database = FirebaseDatabase.getInstance();
-//                DatabaseReference myRef = database.getReference("users").child(athenticationString).child("intrestpayouts");
-//
-//                myRef.push().setValue(new IntrestPayout(5.3,"03/11/2020","Arkadia underground deed payout. 1 buck a deed", "TESTER"));
 
             }
         });
