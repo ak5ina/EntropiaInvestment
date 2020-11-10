@@ -1,4 +1,4 @@
-package com.example.entropiainvestment;
+package com.scrippy.entropiainvestment;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;

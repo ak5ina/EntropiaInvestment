@@ -1,24 +1,18 @@
-package com.example.entropiainvestment.adapters;
+package com.scrippy.entropiainvestment.adapters;
 
-import android.app.Dialog;
 import android.content.Context;
-import android.text.Editable;
-import android.text.TextWatcher;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
-import android.widget.EditText;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
-import com.example.entropiainvestment.IntrestPayout;
-import com.example.entropiainvestment.Order;
-import com.example.entropiainvestment.R;
-import com.example.entropiainvestment.Stock;
+import com.scrippy.entropiainvestment.Order;
+import com.scrippy.entropiainvestment.R;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 

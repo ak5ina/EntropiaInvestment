@@ -1,4 +1,4 @@
-package com.example.entropiainvestment;
+package com.scrippy.entropiainvestment;
 
 public class Stock {
 

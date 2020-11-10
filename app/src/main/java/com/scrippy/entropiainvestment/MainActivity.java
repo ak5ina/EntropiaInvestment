@@ -1,4 +1,4 @@
-package com.example.entropiainvestment;
+package com.scrippy.entropiainvestment;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -15,9 +15,9 @@ import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.example.entropiainvestment.adapters.MyIntrestAdaptor;
-import com.example.entropiainvestment.adapters.MyOrderlistviewAdaptor;
-import com.example.entropiainvestment.adapters.listviewAdaptor;
+import com.scrippy.entropiainvestment.adapters.MyIntrestAdaptor;
+import com.scrippy.entropiainvestment.adapters.MyOrderlistviewAdaptor;
+import com.scrippy.entropiainvestment.adapters.listviewAdaptor;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
@@ -42,7 +42,7 @@ public class MainActivity extends AppCompatActivity {
     private User logedInUser;
     private FirebaseUser firebaseUser;
     private ArrayList<Order> testList;
-    private com.example.entropiainvestment.adapters.listviewAdaptor listviewAdaptor;
+    private com.scrippy.entropiainvestment.adapters.listviewAdaptor listviewAdaptor;
 
 
     @Override

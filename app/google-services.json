@@ -10,7 +10,7 @@
       "client_info": {
         "mobilesdk_app_id": "1:428567555312:android:509aa662c9dcf42e9be635",
         "android_client_info": {
-          "package_name": "com.example.entropiainvestment"
+          "package_name": "com.scrippy.entropiainvestment"
         }
       },
       "oauth_client": [
@@ -18,7 +18,7 @@
           "client_id": "428567555312-f2h54h0a0ca6aegitlberhbtecv6rvcj.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
-            "package_name": "com.example.entropiainvestment",
+            "package_name": "com.scrippy.entropiainvestment",
             "certificate_hash": "dda0448da5c3490107ec3f35871593550e89eba0"
           }
         },
