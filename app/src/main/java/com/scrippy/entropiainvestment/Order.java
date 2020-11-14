@@ -1,4 +1,6 @@
-package com.example.entropiainvestment;
+package com.scrippy.entropiainvestment;
+
+import java.security.PublicKey;
 
 public class Order {
 
@@ -7,8 +9,9 @@ public class Order {
     private int amountOfStockToBuy;
     private double totalPrice;
     private boolean isCompleted;
-    private String orderID;
+    private String orderID, stockToBuyOrSell1, stockID;
     private boolean isCanceled;
+    private User user;
 
     public Order(Stock stockToBuyOrSell, boolean isThisABuyOrder, int amountOfStockToBuy, double totalPrice){
 
@@ -31,6 +34,21 @@ public class Order {
         this.isCompleted = isCompleted;
         this.orderID = orderID;
         this.isCanceled = isCanceled;
+
+    }
+
+    public Order(String stockToBuyOrSell1, boolean isThisABuyOrder, int amountOfStockToBuy, double totalPrice, boolean isCompleted, String orderID, boolean isCanceled, User userID, String stockID) {
+
+
+        this.stockToBuyOrSell1 = stockToBuyOrSell1;
+        this.isThisABuyOrder = isThisABuyOrder;
+        this.amountOfStockToBuy = amountOfStockToBuy;
+        this.totalPrice = totalPrice;
+        this.isCompleted = isCompleted;
+        this.orderID = orderID;
+        this.isCanceled = isCanceled;
+        this.user = userID;
+        this.stockID = stockID;
 
     }
 
@@ -69,5 +87,29 @@ public class Order {
 
     public void setCanceled(boolean canceled) {
         isCanceled = canceled;
+    }
+
+    public String getStockToBuyOrSell1() {
+        return stockToBuyOrSell1;
+    }
+
+    public void setStockToBuyOrSell1(String stockToBuyOrSell1) {
+        this.stockToBuyOrSell1 = stockToBuyOrSell1;
+    }
+
+    public User getUser() {
+        return user;
+    }
+
+    public void setUser(User user) {
+        this.user = user;
+    }
+
+    public String getStockID() {
+        return stockID;
+    }
+
+    public void setStockID(String stockID) {
+        this.stockID = stockID;
     }
 }

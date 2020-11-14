@@ -1,4 +1,4 @@
-package com.example.entropiainvestment;
+package com.scrippy.entropiainvestment;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -18,7 +18,6 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
-import java.util.Date;
 import java.util.List;
 
 public class Admin_Add_Intrest extends AppCompatActivity {

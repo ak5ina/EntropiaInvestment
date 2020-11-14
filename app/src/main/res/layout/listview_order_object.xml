@@ -60,16 +60,46 @@
             android:layout_marginLeft="10dp"
 
             />
+        <TextView
+            android:id="@+id/my_order_user"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="userID: Total Price:"
+            android:textSize="16dp"
+            android:fontFamily="sans-serif-black"
+            android:layout_marginLeft="10dp"
+
+            />
+
+        <TextView
+            android:id="@+id/my_order_user_bank"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="user bank: "
+            android:textSize="16dp"
+            android:fontFamily="sans-serif-black"
+            android:layout_marginLeft="10dp"
+
+            />
 
 
-            <Button
-                android:id="@+id/my_order_cancel"
-                android:layout_weight="1"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:text="Cancel order"
+        <Button
+            android:id="@+id/my_order_cancel"
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Cancel order"
 
-                />
+            />
+
+        <Button
+            android:id="@+id/my_order_confirm"
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="confirm order"
+
+            />
 
 
     </LinearLayout>

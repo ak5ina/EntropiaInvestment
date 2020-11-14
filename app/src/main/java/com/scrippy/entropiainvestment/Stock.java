@@ -1,10 +1,10 @@
-package com.example.entropiainvestment;
+package com.scrippy.entropiainvestment;
 
 public class Stock {
 
     private double value;
     private String name;
-    private String info;
+    private String info, id;
     private int amountOwned;
     private double combinedValueOfAllOwnedStock;
 
@@ -42,5 +42,13 @@ public class Stock {
 
     public void setCombinedValueOfAllOwnedStock(double combinedValueOfAllOwnedStock) {
         this.combinedValueOfAllOwnedStock = combinedValueOfAllOwnedStock;
+    }
+
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
     }
 }
